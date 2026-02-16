@@ -5,10 +5,10 @@
 **Kaggle Course:** [Reference](https://www.kaggle.com/learn-guide/5-day-genai)
 
 **Day 1:** Foundational Models & Prompt Engineering - Explore the evolution of Large Language Models (LLMs), from transformers to techniques like fine-tuning, inference acceleration, and reasoning models. Get trained with the art of prompt engineering for optimal LLM interaction.
-    * [Foundational Large Language Models & Text Generation](https://www.kaggle.com/whitepaper-foundational-llm-and-text-generation)
-    * [Prompt Engineering](https://www.kaggle.com/whitepaper-prompt-engineering)
-    * [LLMs Evaluation Guide](https://services.google.com/fh/files/blogs/neurips_evaluation.pdf)
-    * [Nice ideas about evaluation metrics](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/metrics-templates?hl=pt-br#instruction)
+* [Foundational Large Language Models & Text Generation](https://www.kaggle.com/whitepaper-foundational-llm-and-text-generation)
+* [Prompt Engineering](https://www.kaggle.com/whitepaper-prompt-engineering)
+* [LLMs Evaluation Guide](https://services.google.com/fh/files/blogs/neurips_evaluation.pdf)
+* [Nice ideas about evaluation metrics](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/metrics-templates?hl=pt-br#instruction)
 
 **Day 2:** Embeddings and Vector Stores/Databases - Learn about the conceptual underpinning of embeddings and vector databases, including embedding methods, vector search algorithms, and real-world applications with LLMs, as well as their tradeoffs.
 
