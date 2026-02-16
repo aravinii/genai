@@ -5,7 +5,7 @@ Over the past few years, the field of Generative AI has evolved at an unpreceden
 
 Amid this acceleration, I decided not only to follow the trend, but to deepen my understanding in a structured way. This repository is the result of that effort: a hands-on journey through courses, experiments, and applied projects designed to move beyond surface-level usage and into implementation, evaluation, and system design.
 
-Most of the material here is based on the [5-Day Gen AI Intensive Course with Google]([url](https://www.kaggle.com/learn-guide/5-day-genai)) (which I will reference in more detail in the subsequent folder), and you will find notebooks extracted and adapted from it. These cover foundational concepts as well as more advanced patterns for building applications with generative models.
+Most of the material here is based on the [5-Day Gen AI Intensive Course with Google](https://www.kaggle.com/learn-guide/5-day-genai) (which I will reference in more detail in the subsequent folder), and you will find notebooks extracted and adapted from it. These cover foundational concepts as well as more advanced patterns for building applications with generative models.
 
 As a capstone project, I developed an AI agent focused on the São Paulo real estate market. The agent is designed to help users:
 	•	Understand what it is like to live in specific regions of São Paulo
