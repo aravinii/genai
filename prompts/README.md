@@ -7,18 +7,18 @@ Prompt engineering is not a one-shot activity. It is an iterative process that d
 ### Purpose
 
 The goal of this folder is to:
-	•	Maintain version control over prompt evolution
-	•	Track refinements and structural changes
-	•	Preserve experimental variations
-	•	Improve reproducibility of model behavior
-	•	Support systematic evaluation and benchmarking
+* Maintain version control over prompt evolution
+* Track refinements and structural changes
+* Preserve experimental variations
+* Improve reproducibility of model behavior
+* Support systematic evaluation and benchmarking
 
 ### Why Version Prompts?
 
 In AI systems, prompts function as behavioral specifications. Small wording changes can significantly alter outputs. Without versioning:
-	•	Model responses become non-reproducible
-	•	Debugging becomes difficult
-	•	Performance regressions go unnoticed
-	•	Iterative improvements cannot be tracked
+* Model responses become non-reproducible
+* Debugging becomes difficult
+* Performance regressions go unnoticed
+* Iterative improvements cannot be tracked
 
 Versioning prompts ensures transparency and accountability in the development process.
