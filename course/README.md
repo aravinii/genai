@@ -11,6 +11,7 @@
 * [Nice ideas about evaluation metrics](https://docs.cloud.google.com/vertex-ai/generative-ai/docs/models/metrics-templates?hl=pt-br#instruction)
 
 **Day 2:** Embeddings and Vector Stores/Databases - Learn about the conceptual underpinning of embeddings and vector databases, including embedding methods, vector search algorithms, and real-world applications with LLMs, as well as their tradeoffs.
+* [Embeddings & Vector Stores](https://www.kaggle.com/whitepaper-embeddings-and-vector-stores?_gl=1*1wiomtk*_ga*MTA5MjAwODkyNS4xNzY5MjE1OTg2*_ga_T7QHS60L4Q*czE3NzEzNDI5MDIkbzMzJGcxJHQxNzcxMzQ0OTU2JGo2MCRsMCRoMA..)
 
 **Day 3:** Generative AI Agents - Learn to build sophisticated AI agents by understanding their core components and the iterative development process, including recent agentspace development.
 
