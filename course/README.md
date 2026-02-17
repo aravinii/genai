@@ -14,6 +14,8 @@
 * [Embeddings & Vector Stores](https://www.kaggle.com/whitepaper-embeddings-and-vector-stores?_gl=1*1wiomtk*_ga*MTA5MjAwODkyNS4xNzY5MjE1OTg2*_ga_T7QHS60L4Q*czE3NzEzNDI5MDIkbzMzJGcxJHQxNzcxMzQ0OTU2JGo2MCRsMCRoMA..)
 
 **Day 3:** Generative AI Agents - Learn to build sophisticated AI agents by understanding their core components and the iterative development process, including recent agentspace development.
+* [Agents](https://www.kaggle.com/whitepaper-agents)
+* [Agents Companion](https://www.kaggle.com/whitepaper-agent-companion)
 
 **Day 4:** Domain-Specific LLMs - Delve into the creation and application of specialized LLMs like SecLM and Med-PaLM, with insights from the researchers who built them.
 
