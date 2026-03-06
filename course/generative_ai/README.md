@@ -14,7 +14,10 @@
 * [Embeddings & Vector Stores](https://www.kaggle.com/whitepaper-embeddings-and-vector-stores?_gl=1*1wiomtk*_ga*MTA5MjAwODkyNS4xNzY5MjE1OTg2*_ga_T7QHS60L4Q*czE3NzEzNDI5MDIkbzMzJGcxJHQxNzcxMzQ0OTU2JGo2MCRsMCRoMA..)
 
 **Day 3:** Generative AI Agents - Learn to build sophisticated AI agents by understanding their core components and the iterative development process, including recent agentspace development.
+* [Agents](https://www.kaggle.com/whitepaper-agents)
 
 **Day 4:** Domain-Specific LLMs - Delve into the creation and application of specialized LLMs like SecLM and Med-PaLM, with insights from the researchers who built them.
+* [Solving Domain-Specific Problems Using LLMs](https://www.kaggle.com/whitepaper-solving-domains-specific-problems-using-llms)
 
 **Day 5:** MLOps for Generative AI - Discover how to adapt MLOps practices for Generative AI and leverage Vertex AI's tools for foundation models and generative AI applications.
+* [Operationalizing Generative AI on Vertex AI using MLOps](https://www.kaggle.com/whitepaper-operationalizing-generative-ai-on-vertex-ai-using-mlops)
