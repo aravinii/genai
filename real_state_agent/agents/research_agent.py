@@ -1,10 +1,10 @@
-from pathlib import Path
-import sys
-sys.path.append(str(Path().resolve().parent))
-
 from utils.load_prompt import load_prompt
+from google import genai
+from google.genai import types
+from dotenv import load_dotenv
+import os
 
-def research_agent(target_neighborhood: str) -> str:
+def research_agent(target_neighborhood: str, model: str) -> str:
     """
     Runs the real estate research agent.
 
@@ -14,13 +14,16 @@ def research_agent(target_neighborhood: str) -> str:
 
     Args:
         target_neighborhood (str): Name of the neighborhood to analyze.
+        model: The model identifier to use (previously MODEL).
 
     Returns:
         str: Generated research report about the neighborhood.
     """
-    system_prompt = load_prompt("researcher_agent_v1")
+    CLIENT = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
+    
+    system_prompt = load_prompt("research_agent_v1")
     response = CLIENT.models.generate_content(
-        model = MODEL,
+        model = model,
         contents=f"TARGET NEIGHBORHOOD {target_neighborhood}",
         config = types.GenerateContentConfig(
             system_instruction = system_prompt,

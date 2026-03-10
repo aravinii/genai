@@ -36,7 +36,7 @@ Ele não fornece dados numéricos ou valores de mercado.
 
 Pricing Agent
 
-Responsável por estimar o preço de imóveis em um determinado bairro.
+Responsável por estimar o preço de imóveis em um determinado bairro. Somente ele pode dar estimativas.
 
 
 WHEN TO USE EACH AGENT
