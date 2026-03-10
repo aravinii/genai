@@ -1,3 +1,9 @@
+from pathlib import Path
+import sys
+sys.path.append(str(Path().resolve().parent))
+
+from utils.load_prompt import load_prompt
+
 def research_agent(target_neighborhood: str) -> str:
     """
     Runs the real estate research agent.
