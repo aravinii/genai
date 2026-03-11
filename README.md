@@ -1,6 +1,11 @@
 # Gen AI
 Hands-on exploration of Generative AI through structured courses, experiments, and applied projects.
 
+## Requirements
+- **Python 3.10+** (recommended: 3.11 or 3.13). See `.python-version` if using pyenv.
+- The `requirements.txt` in the root lists only the **direct dependencies** (google-genai, fastapi, pandas, scikit-learn, etc.). Pip will install the rest automatically.
+- Installation: `python -m venv .venv`, `source .venv/bin/activate` (or `.venv\Scripts\activate` on Windows), then `pip install -r requirements.txt`.
+
 Over the past few years, the field of Generative AI has evolved at an unprecedented pace. What once lived primarily in research papers and benchmarks is now embedded in APIs, SDKs, and real-world products. Models have become more capable, more accessible, and more integrated into practical systems.
 
 Amid this acceleration, I decided not only to follow the trend, but to deepen my understanding in a structured way. This repository is the result of that effort: a hands-on journey through courses, experiments, and applied projects designed to move beyond surface-level usage and into implementation, evaluation, and system design.

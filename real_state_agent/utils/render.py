@@ -6,6 +6,7 @@ def render_block(role: str, message: str, color: str):
     html = f"""
     <div style="
         background-color: {color};
+        color: black; 
         padding: 10px;
         border-radius: 8px;
         margin: 5px 0px;

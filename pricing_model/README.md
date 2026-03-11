@@ -41,7 +41,7 @@ While the model does not achieve particularly high predictive performance, that 
 	•	Clean ML workflow implementation
 	•	Artifact generation for downstream system integration
 
-The `requirements.txt` file specifies the exact library versions used during model development.
+The dependencies for this module (scikit-learn, pandas, joblib) are included in the minimal set of direct dependencies listed in the root [`requirements.txt`](../requirements.txt). Install everything from the root with `pip install -r requirements.txt` (pip will resolve indirect dependencies automatically).
 
 ⸻
 
