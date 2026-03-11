@@ -1,10 +1,9 @@
 from utils.load_prompt import load_prompt
 from google import genai
 from google.genai import types
-from dotenv import load_dotenv
-import os
+from utils.config import CLIENT, MODEL, USER_COLOR, AGENT_COLOR, FUNCTION_COLOR
 
-def research_agent(target_neighborhood: str, model: str) -> str:
+def research_agent(target_neighborhood: str) -> str:
     """
     Runs the real estate research agent.
 
@@ -19,11 +18,10 @@ def research_agent(target_neighborhood: str, model: str) -> str:
     Returns:
         str: Generated research report about the neighborhood.
     """
-    CLIENT = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
     
     system_prompt = load_prompt("research_agent_v1")
     response = CLIENT.models.generate_content(
-        model = model,
+        model = MODEL,
         contents=f"TARGET NEIGHBORHOOD {target_neighborhood}",
         config = types.GenerateContentConfig(
             system_instruction = system_prompt,

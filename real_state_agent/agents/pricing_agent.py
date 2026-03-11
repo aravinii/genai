@@ -1,14 +1,12 @@
-from utils.load_prompt import load_prompt
-from utils.property import Property
-
 from google import genai
 from google.genai import types
-from dotenv import load_dotenv
-import os
 import json
 
+from utils.config import CLIENT, MODEL, USER_COLOR, AGENT_COLOR, FUNCTION_COLOR
+from utils.load_prompt import load_prompt
 
-def pricing_agent(model: str, info: dict) -> dict:
+
+def pricing_agent(info: dict) -> dict:
     """
     Runs the pricing agent.
 
@@ -56,13 +54,12 @@ def pricing_agent(model: str, info: dict) -> dict:
         {info}
     """
     
-    CLIENT = genai.Client(api_key=os.getenv("GOOGLE_API_KEY"))
-    
     response = CLIENT.models.generate_content(
-        model = model,
+        model = MODEL,
         contents = prompt,
         config = types.GenerateContentConfig(
             system_instruction = load_prompt("pricing_agent_v1"),
+            response_mime_type="application/json",
             temperature = 0
         ))
     
