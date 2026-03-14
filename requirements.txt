@@ -1,4 +1,4 @@
-# Python 3.10+. Use: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
+# Python 3.10+ (3.11 recommended, see .python-version). Use: python -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt
 
 # Agents & API
 google-genai
@@ -6,13 +6,14 @@ python-dotenv
 pydantic
 fastapi
 uvicorn
+requests
 
 # Notebooks (render + kernel)
 markdown
 ipython
 ipykernel
 
-# Price model (house_price_model.joblib treinado com scikit-learn 1.4.2; manter versão para load sem warning)
+# Price model (house_price_model.joblib trained with scikit-learn 1.4.2; keep this version for load without warning)
 pandas
 scikit-learn==1.4.2
 joblib

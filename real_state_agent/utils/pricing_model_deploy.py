@@ -1,6 +1,8 @@
 import __main__
 import joblib
 import uvicorn
+import socket
+import threading
 
 import numpy as np
 from fastapi import FastAPI
@@ -8,7 +10,6 @@ from sklearn.preprocessing import FunctionTransformer
 import pandas as pd
 
 from utils.config import MODEL_PATH
-import threading
 
 def clip_transformer(a_min, a_max):
     return FunctionTransformer(
@@ -32,6 +33,13 @@ def predict(input_data: dict) -> float:
         df = pd.DataFrame([input_data])
         return price_model.predict(df)[0]
 
+def port_in_use(port: int, host: str = "0.0.0.0") -> bool:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        try:
+            s.bind((host, port))
+            return False
+        except OSError:
+            return True
 
 def start_server(host: str = "0.0.0.0", port: int = 8000):
     """
@@ -48,6 +56,8 @@ def start_server(host: str = "0.0.0.0", port: int = 8000):
     Returns:
         threading.Thread: The thread running the API server in the background.
     """
+    if port_in_use(port, host):
+        return
     def _run():
         uvicorn.run(app, host=host, port=port)
 
