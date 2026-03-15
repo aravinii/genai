@@ -1,28 +1,19 @@
-import __main__
 import joblib
 import uvicorn
 import socket
 import threading
 
-import numpy as np
 from fastapi import FastAPI
-from sklearn.preprocessing import FunctionTransformer
 import pandas as pd
 
-from utils.config import MODEL_PATH
+from pathlib import Path
+import sys
 
-def clip_transformer(a_min, a_max):
-    return FunctionTransformer(
-        np.clip,
-        kw_args={"a_min": a_min, "a_max": a_max},
-        feature_names_out="one-to-one",
-    )
+repo_root = Path(__file__).resolve().parent.parent.parent
+sys.path.insert(0, str(repo_root))
 
-def zero_to_nan(x):
-    return np.where(x == 0, np.nan, x)
-
-__main__.zero_to_nan = zero_to_nan
-__main__.clip_transformer = clip_transformer
+from real_state_agent.utils.config import MODEL_PATH
+from real_state_agent.utils.transformers import zero_to_nan, clip_transformer
 
 price_model = joblib.load(MODEL_PATH)
 
