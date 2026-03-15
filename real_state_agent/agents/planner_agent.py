@@ -5,7 +5,7 @@ from agents.research_agent import research_agent
 from agents.pricing_agent import pricing_agent
 from utils.load_prompt import load_prompt
 from utils.render import render_block
-from utils.config import CLIENT, MODEL, USER_COLOR, AGENT_COLOR, FUNCTION_COLOR
+from utils.config import CLIENT, MODEL, ANSI_USER_COLOR, ANSI_RESET_COLOR
 
 def planner_agent(model: str = MODEL) -> None:
     """
@@ -54,11 +54,14 @@ def planner_agent(model: str = MODEL) -> None:
     )
 
     while True:
+        print(ANSI_USER_COLOR, end="")
         user_input = input("USER: ")
+        print(ANSI_RESET_COLOR, end="")
+
         if user_input.lower() in ["exit"]:
             break
 
-        render_block("USER", user_input, USER_COLOR)
+        render_block("USER", user_input)
 
         resp = chat.send_message(user_input)
 
@@ -70,7 +73,7 @@ def planner_agent(model: str = MODEL) -> None:
             for part in parts:
 
                 if part.text:
-                    render_block("AGENT", part.text, AGENT_COLOR)
+                    render_block("AGENT", part.text)
 
                 elif part.function_call:
 
@@ -78,7 +81,7 @@ def planner_agent(model: str = MODEL) -> None:
                     name = fn.name
                     args = dict(fn.args)
 
-                    render_block("FUNCTION", f"🛠 Calling {name}({args})", FUNCTION_COLOR)
+                    render_block("FUNCTION", f"🛠 Calling {name}({args})")
 
                     result = tool_map[name](**args)
 

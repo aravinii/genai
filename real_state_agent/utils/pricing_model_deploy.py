@@ -59,7 +59,7 @@ def start_server(host: str = "0.0.0.0", port: int = 8000):
     if port_in_use(port, host):
         return
     def _run():
-        uvicorn.run(app, host=host, port=port)
+        uvicorn.run(app, host=host, port=port, log_level="error")
 
     thread = threading.Thread(target=_run, daemon=True)
     thread.start()
