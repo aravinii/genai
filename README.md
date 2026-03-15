@@ -14,8 +14,13 @@ As a capstone project, this repo implements a **multi-agent** real estate assist
 
 ## Setup and run the agent
 1. **Clone** the repository.
-2. **Install dependencies:**  
+2. **Create a `.env` file** in the repo root with your Google API key (the file is in `.gitignore` and is not committed):
+   ```
+   GOOGLE_API_KEY=your_key_here
+   ```
+   You can get a key at [Google AI Studio](https://aistudio.google.com/apikey).
+3. **Install dependencies:**  
    `python -m venv .venv`, then `source .venv/bin/activate` (Windows: `.venv\Scripts\activate`), then `pip install -r requirements.txt`.
-3. **Run** `python start_here.py` from the repo root to start the conversation in the terminal.
+4. **Run** `python start_here.py` from the repo root to start the conversation in the terminal.
 
 For a more visual, notebook-based flow, open [real_estate_agent/notebooks/planner_agent.ipynb](real_estate_agent/notebooks/planner_agent.ipynb) and run the cells (start the server in the first cell, then use the chat in the next).
