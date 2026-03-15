@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 from pathlib import Path
 
-_base = Path(__file__).resolve().parent   # genai/real_state_agent/utils
+_base = Path(__file__).resolve().parent   # genai/real_estate_agent/utils
 base_dir = _base.parent.parent            # genai/
 
 load_dotenv()

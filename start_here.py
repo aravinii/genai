@@ -1,6 +1,6 @@
 from pathlib import Path
 import sys
-sys.path.insert(0, str(Path(__file__).resolve().parent / "real_state_agent"))
+sys.path.insert(0, str(Path(__file__).resolve().parent / "real_estate_agent"))
 
 
 from agents.planner_agent import planner_agent

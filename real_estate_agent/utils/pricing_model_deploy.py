@@ -12,8 +12,8 @@ import sys
 repo_root = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(repo_root))
 
-from real_state_agent.utils.config import MODEL_PATH
-from real_state_agent.utils.transformers import zero_to_nan, clip_transformer
+from real_estate_agent.utils.config import MODEL_PATH
+from real_estate_agent.utils.transformers import zero_to_nan, clip_transformer
 
 price_model = joblib.load(MODEL_PATH)
 

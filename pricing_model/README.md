@@ -50,9 +50,3 @@ The dependencies for this module (scikit-learn, pandas, joblib) are included in 
 The trained model is serialized as a pickle object called `house_price_model.joblib`.
 
 This artifact is intended to serve as a callable pricing function within the AI agent architecture developed in this repository.
-
-Future steps include:
-	•	Defining a clean inference interface
-	•	Integrating the model into the agent pipeline
-	•	Handling input validation and feature consistency
-	•	Implementing production-ready loading mechanisms
