@@ -26,32 +26,6 @@ def save_chat(history: dict, text: str, role: str, type: str = "text") -> dict:
     })
     return history
 
-def add_metrics(resp, history) -> dict:
-    """
-    Add the metrics to the history.
-
-    Args:
-        resp (dict): The response from the model.
-        history (dict): The history to add the metrics to.
-
-    Returns:
-        dict: The history with the metrics added.
-    """
-    usage = getattr(resp, "usage_metadata", None)
-    if usage and hasattr(usage, "prompt_token_count"):
-        input_tokens = getattr(usage, "prompt_token_count", 0) 
-        history["input_tokens"].append(input_tokens)
-    
-    if usage and hasattr(usage, "candidates_token_count"):
-        output_tokens = getattr(usage, "candidates_token_count", 0)
-        history["output_tokens"].append(output_tokens)
-    
-    if usage and hasattr(usage, "thoughts_token_count"):
-        thoughts_tokens = getattr(usage, "thoughts_token_count", 0) or 0
-        history["output_tokens"].append(thoughts_tokens)
-
-    return history
-
 def planner_agent(model: str = MODEL, return_object: bool = False) -> None | dict:
     """
     Planner Agent: autonomously decides which agent to call based on user input.
@@ -66,7 +40,7 @@ def planner_agent(model: str = MODEL, return_object: bool = False) -> None | dic
         None | dict: Displays the agent's response in markdown or returns the history as a dictionary.
     """
     system_prompt = load_prompt("planner_agent_v2")
-    history = {"model_name": MODEL, "input_tokens": [], "output_tokens": [], "latency": [], "chat": []}
+    history = {"model_name": MODEL, "total_tokens": [], "latency": [], "chat": []}
 
     research_agent_def = types.FunctionDeclaration.from_callable(client = CLIENT, callable = research_agent)
     pricing_agent_def = types.FunctionDeclaration.from_callable(client = CLIENT, callable = pricing_agent)
@@ -114,15 +88,15 @@ def planner_agent(model: str = MODEL, return_object: bool = False) -> None | dic
         
         resp = chat.send_message(user_input)
         history = save_chat(history, user_input, "user", "text")
-        history = add_metrics(resp, history)
+        total_tokens = getattr(resp.usage_metadata, "total_token_count", None)
+        if total_tokens > 0:
+            history["total_tokens"].append(total_tokens)
 
         while True:
-
             parts = resp.candidates[0].content.parts
             tool_called = False
 
             for part in parts:
-
                 if part.text:
                     render_block("AGENT", part.text)
                     history = save_chat(history, part.text, "planner_agent", "text")
@@ -136,14 +110,18 @@ def planner_agent(model: str = MODEL, return_object: bool = False) -> None | dic
                     history = save_chat(history, {"tool_name": name, "args": args}, "planner_agent", "tool_call")
 
                     result = tool_map[name](**args)
+                    payload = result.get("result", result)
                     resp = chat.send_message(
                         types.Part.from_function_response(
                             name=name,
-                            response={"result": result}
+                            response={"result": payload}
                         )
                     )
-                    history = save_chat(history, result, name, "tool_response")
-                    history = add_metrics(resp, history)
+                    history = save_chat(history, payload, name, "tool_response")
+                    history["total_tokens"].append(result['metadata'])
+                    total_tokens = getattr(resp.usage_metadata, "total_token_count", None)
+                    if total_tokens > 0:
+                        history["total_tokens"].append(total_tokens)
                     
                     tool_called = True
                     break

@@ -29,8 +29,9 @@ RULES
     "type": str | null            # tipo da propriedade exclusivamente entre 'Apartamento' e 'Casa'
     
   },
-  "comment": "...",          # breve comentário com uma sugestão do próximo campo a coletar ou aviso que todos os campos foram coletados
-  "estimated_price": float | None  # o valor estimado da propriedade
+  "comment": "...",               # breve comentário com uma sugestão do próximo campo a coletar ou aviso que todos os campos foram coletados
+  "estimated_price": float | None,# o valor estimado da propriedade
+  "metadata": int | None          # IGNORE esta informação (uso interno)
 }
 4. Explicitamente mantenha a estrutura do JSON, mesmo que algum campo esteja com valor faltante (null)
 5. No comentario de sugestão, sugira um campo por vez.
@@ -54,5 +55,6 @@ Exemplo de saída após receber a informação de quartos e banheiros:
     "type": null
   },
   "comment": "O próximo campo a coletar é area",
-  "estimated_price": null
+  "estimated_price": null,
+  "metadata": null
 }

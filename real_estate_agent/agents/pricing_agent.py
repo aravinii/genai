@@ -30,6 +30,7 @@ def pricing_agent(info: dict) -> dict:
         },
         "comment": "...",               #'comment': short suggestion or status message for the next step
         "estimated_price": null         #'estimated_price': estimated_price for the property.
+        "metadata": int | null          #'metadata': total tokens used by the model.
     }
 
     Args:
@@ -49,7 +50,8 @@ def pricing_agent(info: dict) -> dict:
                         "type": str | null
                 },
                     "comment": "...",
-                    "estimated_price": float | null
+                    "estimated_price": float | null,
+                    "metadata": int | null
                 }
     """
 
@@ -72,6 +74,7 @@ def pricing_agent(info: dict) -> dict:
         pricing_json = json.loads(response.text)
         inf = pricing_json.get("info", {})
         prop = Property.from_dict(inf)
+        pricing_json["metadata"] = getattr(response.usage_metadata, "total_token_count", None)
         if prop.is_complete():
             try:
                 pricing_json["estimated_price"] = predict_price(inf)
@@ -83,8 +86,9 @@ def pricing_agent(info: dict) -> dict:
     except json.JSONDecodeError:
         pricing_json = {
             "info": info['property_info'],
-            "comment": "Não foi possível gerar JSON. Tente novamente.",
-            "estimated_price": None
+            "comment": "Não foi possível gerar JSON. Envie todos os campos obrigatórios.",
+            "estimated_price": None,
+            "metadata": getattr(response.usage_metadata, "total_token_count", None)
         }
-    
+
     return pricing_json

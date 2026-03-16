@@ -1,10 +1,10 @@
 from utils.load_prompt import load_prompt
 from google import genai
 from google.genai import types
-from utils.config import CLIENT, MODEL, USER_COLOR, AGENT_COLOR, FUNCTION_COLOR
+from utils.config import CLIENT, MODEL
 
 def research_agent(target_neighborhood: str) -> str:
-    """
+    f"""
     Runs the real estate research agent.
 
     The agent analyzes the investment potential of a given neighborhood
@@ -16,7 +16,9 @@ def research_agent(target_neighborhood: str) -> str:
         model: The model identifier to use (previously MODEL).
 
     Returns:
-        str: Generated research report about the neighborhood.
+        dict: A dictionary containing:
+            - "result" (str): The generated research report about the analyzed neighborhood.
+            - "metadata" (dict): The metadata returned by the model response.
     """
     
     system_prompt = load_prompt("research_agent_v1")
@@ -28,5 +30,11 @@ def research_agent(target_neighborhood: str) -> str:
             tools=[types.Tool(google_search=types.GoogleSearch())],
             temperature=0.5
         ))
+
+    total_tokens = getattr(response.usage_metadata, "total_token_count", None)
+    if total_tokens and total_tokens > 0:
+        return {"result": response.text, "metadata": total_tokens}
+    else:
+        return {"result": response.text, "metadata": None}
     
-    return response.text
+    
