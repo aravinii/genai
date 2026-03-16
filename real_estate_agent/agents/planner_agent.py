@@ -40,7 +40,7 @@ def planner_agent(model: str = MODEL, return_object: bool = False) -> None | dic
         None | dict: Displays the agent's response in markdown or returns the history as a dictionary.
     """
     system_prompt = load_prompt("planner_agent_v2")
-    history = {"model_name": MODEL, "total_tokens": [], "latency": [], "chat": []}
+    history = {"model_name": MODEL, "total_tokens": [], "latency": [], "turns": 0, "chat": []}
 
     research_agent_def = types.FunctionDeclaration.from_callable(client = CLIENT, callable = research_agent)
     pricing_agent_def = types.FunctionDeclaration.from_callable(client = CLIENT, callable = pricing_agent)
@@ -80,6 +80,7 @@ def planner_agent(model: str = MODEL, return_object: bool = False) -> None | dic
 
         if user_input.lower() in ["exit"]:
             if return_object:
+                history["turns"] = len(history["latency"])
                 return history
             break
 
