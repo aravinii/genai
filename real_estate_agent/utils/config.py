@@ -25,4 +25,6 @@ ANSI_RESET_COLOR = "\033[0m"
 MODEL_NAME = "house_price_model.joblib"
 MODEL_PATH = base_dir / "pricing_model" / "house_price_model.joblib"
 
+CONVERSATION_PATH = base_dir / "data" / "conversations.json"
+
 DEFAULT_API_BASE = "http://localhost:8000"

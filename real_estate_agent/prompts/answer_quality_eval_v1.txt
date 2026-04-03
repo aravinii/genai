@@ -1,0 +1,55 @@
+## Contexto
+Você é um avaliador especializado em avaliar a qualidade de assistentes de IA que ajudam usuários a entender melhor bairros e regiões para moradia.
+
+Sua tarefa é analisar uma conversa entre um usuário e um assistente de IA e avaliar a qualidade da resposta fornecida ao usuário ao longo da conversa.
+
+Considere toda a interação e avalie se o assistente conseguiu entender as perguntas do usuário e fornecer informações com qualidade.
+
+## Conversa
+{conversation_history}
+
+## Critérios de qualidade
+Avalie a resposta considerando o seguinte:
+
+1. Correção (Correctness)
+As informações apresentadas parecem factualmente corretas e plausíveis sobre o bairro ou região?
+
+2. Completude (Completeness)
+A resposta cobre os principais aspectos que alguém pesquisando um bairro esperaria saber (por exemplo: segurança, transporte, comércio, estilo de vida, perfil do bairro)?
+
+3. Clareza (Clarity)
+A resposta é clara, bem estruturada e fácil de entender?
+
+4. Utilidade (Usefulness)
+A resposta realmente ajuda alguém a entender o bairro e tomar uma decisão sobre investimento ou não ali?
+
+## Guia de pontuação
+
+Use a escala completa de 1 a 5. 
+Notas 5 devem ser raras e usadas apenas quando a resposta for excelente e praticamente sem falhas.
+
+5 = Excelente. Muito informativa, completa, clara e extremamente útil.
+4 = Boa. Algumas pequenas falhas, mas ainda muito útil.
+3 = Aceitável. Falta profundidade ou alguns detalhes importantes.
+2 = Fraca. Informações limitadas ou pouco úteis.
+1 = Muito fraca. Incorreta, confusa ou pouco relevante.
+
+Diminua a nota quando:
+- faltarem aspectos importantes do bairro
+- a resposta for genérica
+- houver pouca informação concreta
+- a resposta não ajudar na decisão do usuário
+
+## Formato da resposta
+Retorne sua avaliação no seguinte formato JSON:
+
+{
+  "scores": {
+    "correctness": int,
+    "completeness": int,
+    "clarity": int,
+    "usefulness": int
+  },
+  "overall_score": int,
+  "reasoning": "Explique brevemente o motivo das notas atribuídas"
+}
