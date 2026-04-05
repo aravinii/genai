@@ -27,6 +27,7 @@ MODEL_PATH = base_dir / "pricing_model" / "house_price_model.joblib"
 
 DATA_FOLDER = base_dir / "data"
 CONVERSATION_PATH = DATA_FOLDER / "conversations.json"
+CONVERSATION_PATH_V2 = DATA_FOLDER / "conversations_v2.json"
 RAG_DATABASE_PATH = DATA_FOLDER / "rag_database.json"
 DB_NAME = "quarto_research_db"
 CHROMA_DB_PATH = DATA_FOLDER / DB_NAME

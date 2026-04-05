@@ -14,7 +14,7 @@ class GeminiEmbeddingFunction(EmbeddingFunction):
         )
         return [e.values for e in response.embeddings]
 
-def search_neighborhood_context(question: str, neighborhood: str, k: int = 5):
+def search_neighborhood_context(question: str, neighborhood: str, k: int = 15):
     """
     Retrieve top-k context chunks about a neighborhood from the vector database.
     """
