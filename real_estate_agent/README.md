@@ -18,9 +18,9 @@ The **pricing agent** collects property attributes (bedrooms, bathrooms, area, I
 
 | Folder | Purpose |
 |--------|---------|
-| [**agents/**](agents/) | Orchestrator and specialists: `planner_agent` (router), `research_agent` (neighborhood analysis, optional Google Search), `pricing_agent` (data collection + price API). |
+| [**agents/**](agents/) | Orchestrator and specialists: `planner_agent` (router), `research_agent` (neighborhood analysis, optional Google Search), `pricing_agent` (data collection + price API). See [agents/README.md](agents/README.md). |
 | [**prompts/**](prompts/) | Versioned system prompts (`.txt`) for each agent. Defines role, rules, and when to use each specialist. See [prompts/README.md](prompts/README.md) for versioning rationale. |
-| [**utils/**](utils/) | Shared code: config, prompt loader, render (terminal vs notebook), pricing API client, FastAPI deploy for the price model, `Property` model, and transformers used by the ML pipeline. |
-| [**notebooks/**](notebooks/) | Interactive notebooks to run and test the planner, research agent, and pricing agent in isolation or together. |
+| [**utils/**](utils/) | Shared code: config, prompt loader, render (terminal vs notebook), pricing API client, FastAPI deploy for the price model, `Property` model, and transformers used by the ML pipeline. See [utils/README.md](utils/README.md). |
+| [**notebooks/**](notebooks/) | Interactive notebooks to run and test the planner, research agent, and pricing agent in isolation or together. See [notebooks/README.md](notebooks/README.md). |
 | [**notebooks/experiment/**](notebooks/experiment/) | RAG pipeline experiments: generate `rag_database.json`, index with Chroma, test RAG chat. See [notebooks/experiment/README.md](notebooks/experiment/README.md). |
 | [**evals/**](evals/) | Conversation capture, LLM-as-judge evals, and metrics notebooks. See [evals/README.md](evals/README.md). |
