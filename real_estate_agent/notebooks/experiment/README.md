@@ -4,6 +4,16 @@ These notebooks prototype the **retrieval-augmented** neighborhood research path
 
 They are **not** the same as the production-style agents under [`agents/`](../../agents/); they are a self-contained pipeline for iterating on RAG quality and latency before wiring results into broader evals.
 
+---
+
+### Report (RAG vs Research)
+
+**Generated Markdown report:** [`data/conversation_metrics_report.md`](../../../data/conversation_metrics_report.md)
+
+This file summarizes the **RAG Agent vs Research Agent** comparison (LLM-judge scores, latency, tokens, and overview tables). Use [`evals/chat_metrics.ipynb`](../../evals/chat_metrics.ipynb) to reproduce or refresh the numbers before updating the committed `.md`.
+
+---
+
 ## Suggested order
 
 | Step | Notebook | What it does |
