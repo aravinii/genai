@@ -22,3 +22,5 @@ The **pricing agent** collects property attributes (bedrooms, bathrooms, area, I
 | [**prompts/**](prompts/) | Versioned system prompts (`.txt`) for each agent. Defines role, rules, and when to use each specialist. See [prompts/README.md](prompts/README.md) for versioning rationale. |
 | [**utils/**](utils/) | Shared code: config, prompt loader, render (terminal vs notebook), pricing API client, FastAPI deploy for the price model, `Property` model, and transformers used by the ML pipeline. |
 | [**notebooks/**](notebooks/) | Interactive notebooks to run and test the planner, research agent, and pricing agent in isolation or together. |
+| [**notebooks/experiment/**](notebooks/experiment/) | RAG pipeline experiments: generate `rag_database.json`, index with Chroma, test RAG chat. See [notebooks/experiment/README.md](notebooks/experiment/README.md). |
+| [**evals/**](evals/) | Conversation capture, LLM-as-judge evals, and metrics notebooks. See [evals/README.md](evals/README.md). |
