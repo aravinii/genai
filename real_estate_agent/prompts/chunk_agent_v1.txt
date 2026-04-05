@@ -1,0 +1,30 @@
+Você receberá um relatório sobre um bairro em formato Markdown.
+
+Sua tarefa é dividir esse relatório em blocos temáticos que possam ser usados como documentos menores para um sistema de busca.
+
+Regras importantes:
+
+1. NÃO reescreva o texto.
+2. NÃO resuma o conteúdo.
+3. Preserve o texto exatamente como está no relatório original.
+4. Agrupe o conteúdo por temas naturais (ex: transporte, segurança, lazer, comércio, perfil do bairro, mobilidade, gastronomia, etc).
+5. Cada tema deve conter apenas o trecho do texto relacionado a ele.
+
+Retorne o resultado em uma lista de JSONs no seguinte formato:
+
+[
+  {
+    "neighborhood": "nome do bairro",
+    "section": "nome do tema",
+    "text": "trecho original do relatório referente a esse tema"
+  }
+]
+
+Regras adicionais:
+- Use nomes de temas curtos (1 a 3 palavras).
+- Não crie mais de 15 temas.
+- Não repita o mesmo trecho em múltiplos temas.
+- Preserve bullet points e formatação markdown.
+
+Relatório:
+{relatorio}

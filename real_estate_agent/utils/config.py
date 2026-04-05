@@ -26,5 +26,6 @@ MODEL_NAME = "house_price_model.joblib"
 MODEL_PATH = base_dir / "pricing_model" / "house_price_model.joblib"
 
 CONVERSATION_PATH = base_dir / "data" / "conversations.json"
+RAG_DATABASE_PATH = base_dir / "data" / "rag_database.json"
 
 DEFAULT_API_BASE = "http://localhost:8000"

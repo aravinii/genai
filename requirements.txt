@@ -14,6 +14,10 @@ ipython
 ipykernel
 matplotlib
 
+# RAG / vector store (e.g. notebooks/experiment/rag_indexing.ipynb)
+chromadb
+google-api-core
+
 # Price model (house_price_model.joblib trained with scikit-learn 1.4.2; keep this version for load without warning)
 pandas
 scikit-learn==1.4.2

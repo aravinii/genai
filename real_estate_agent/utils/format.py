@@ -13,7 +13,7 @@ def format_judge_conversation(conversation: dict) -> str:
             turns.append(turn)
     return "\n\n".join(turns)
 
-def parse_judge_json(text: str) -> dict:
+def parse_json_output(text: str) -> dict:
     t = text.strip()
     if t.startswith("```"):
         t = re.sub(r"^```(?:json)?\s*", "", t, flags=re.IGNORECASE)
