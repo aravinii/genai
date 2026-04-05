@@ -1,0 +1,728 @@
+[
+  {
+    "model_name": "gemini-2.5-flash",
+    "total_tokens": [
+      1239,
+      1311,
+      6931,
+      2554,
+      2609,
+      2645,
+      2682,
+      2725,
+      918,
+      2853,
+      2971,
+      894,
+      3036,
+      3130,
+      971,
+      3240,
+      3392,
+      887,
+      3511,
+      3571
+    ],
+    "latency": [
+      1.9480211249901913,
+      16.130467917013448,
+      0.9755913749977481,
+      1.8071665829920676,
+      1.0582093749835622,
+      4.546319790999405,
+      5.525306249997811,
+      4.117104292003205,
+      4.43191745900549,
+      1.169381457992131
+    ],
+    "turns": 10,
+    "chat": [
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Ola!"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Olá! Bem-vindo à Quarto. Sou seu consultor imobiliário especializado em algumas das melhores regiões de São Paulo.\n\nEstou aqui para ajudar você a entender melhor o potencial de investimento em bairros como Santana, Mooca, Brooklin, Vila Mariana e Tatuapé, além de auxiliar na precificação de propriedades nessas áreas.\n\nPara começarmos, em qual desses bairros você tem interesse em investir ou gostaria de precificar uma propriedade?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Eu queria conhecer mais sobre o Brooklin."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "tool_call",
+        "content": {
+          "tool_name": "rag_agent",
+          "args": {
+            "target_neighborhood": "Brooklin"
+          }
+        }
+      },
+      {
+        "role": "rag_agent",
+        "type": "tool_response",
+        "content": {
+          "result": "## Análise de Investimento Imobiliário: Brooklin\n\nOlá, investidor! É um prazer apresentar a você o Brooklin, um bairro que se destaca como uma excelente oportunidade no mercado imobiliário de São Paulo. Vamos detalhar o que faz desta região um investimento tão promissor.\n\n### 1. Visão geral do bairro\n\nO Brooklin é um dos bairros mais nobres e valorizados da Zona Sul de São Paulo, conhecido por sua capacidade de harmonizar o ambiente residencial com o dinamismo corporativo. Ele se divide em duas áreas distintas: o **Brooklin Novo**, que pulsa com a energia empresarial e abriga grandes centros comerciais, e o **Brooklin Velho**, que oferece um refúgio de tranquilidade com suas ruas arborizadas e uma atmosfera mais residencial. Essa dualidade é um dos grandes atrativos do bairro, capaz de atender a diversos estilos de vida e, consequentemente, a uma ampla gama de investidores.\n\n### 2. Principais fatores de valorização\n\nO potencial de valorização do Brooklin é impulsionado por uma série de fatores estratégicos:\n\n*   **Infraestrutura Urbana de Primeira Linha:** O bairro oferece uma infraestrutura completa e de alta qualidade. Isso se traduz em ruas bem cuidadas, uma vasta gama de serviços essenciais, comércio diversificado, escolas renomadas, hospitais de referência e modernos centros comerciais. Essa conveniência no dia a dia aumenta significativamente a atratividade para quem busca moradia e, consequentemente, para locação.\n*   **Mobilidade e Acesso Facilitado:** A localização estratégica do Brooklin é um de seus maiores trunfos. O bairro é extremamente bem servido por transporte público, contando com as estações Brooklin e Campo Belo da Linha 5-Lilás do Metrô, que se conectam a outras linhas importantes da cidade. Além disso, possui corredores de ônibus em vias estratégicas e fácil acesso à Marginal Pinheiros e ao Aeroporto de Congonhas. Essa excelente conectividade é um diferencial enorme para profissionais que precisam se deslocar pela cidade ou viajar com frequência, elevando o valor de locação dos imóveis. A futura Estação Brooklin Paulista, da Linha 17-Ouro, promete reforçar ainda mais essa vantagem.\n*   **Qualidade de Vida Elevada:** O Brooklin consegue equilibrar o ritmo urbano com áreas residenciais tranquilas e arborizadas, proporcionando uma excelente qualidade de vida aos seus moradores. A segurança é um ponto forte, o que torna o bairro ainda mais desejável para famílias e indivíduos que buscam um ambiente seguro e agradável para viver.\n*   **Polo Corporativo e de Serviços:** A presença de centros comerciais, hospitais e universidades na região gera uma demanda constante por moradia, tanto para profissionais quanto para estudantes. Essa proximidade com importantes polos de trabalho e estudo garante uma alta taxa de ocupação e boa rentabilidade para imóveis de aluguel.\n\n### 3. Perfil de demanda imobiliária\n\nO Brooklin atrai uma demanda bastante diversificada e com alto poder aquisitivo. Para investidores em locação, o bairro é particularmente atraente devido à alta valorização e à constante procura por aluguel, inclusive para curta temporada (Airbnb). A proximidade com centros comerciais, hospitais, universidades e o Aeroporto de Congonhas garante uma alta taxa de ocupação e uma excelente rentabilidade. Seja para moradia própria ou para locação, a demanda por imóveis na região é consistente e resiliente.\n\n### 4. Conclusão sobre o potencial de investimento\n\nO Brooklin é, sem dúvida, um dos bairros com maior potencial de valorização imobiliária em São Paulo. A combinação de uma localização estratégica, infraestrutura completa, excelente mobilidade e uma vasta oferta de comércio e lazer cria um ambiente extremamente atrativo para moradia e, consequentemente, para investimento.\n\nO bairro tem figurado entre os bairros com maior valorização no aluguel em São Paulo, superando outras regiões nobres. Investir no Brooklin é apostar em um mercado sólido e promissor, com grandes chances de retorno financeiro, seja pela valorização do capital ou pela rentabilidade do aluguel. É uma escolha inteligente para quem busca segurança, sofisticação e um alto potencial de crescimento em seu portfólio imobiliário."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Que ótima escolha! O Brooklin é, de fato, um dos bairros mais promissores para investimento em São Paulo.\n\nEle se destaca por harmonizar um ambiente residencial tranquilo com um dinamismo corporativo vibrante. O bairro é dividido em Brooklin Novo, com sua energia empresarial e centros comerciais, e Brooklin Velho, que oferece ruas arborizadas e uma atmosfera mais residencial.\n\nOs principais fatores de valorização do Brooklin incluem:\n\n*   **Infraestrutura Urbana de Primeira Linha:** Com ruas bem cuidadas, serviços essenciais, comércio diversificado, escolas renomadas e hospitais de referência.\n*   **Mobilidade e Acesso Facilitado:** É muito bem servido por transporte público, com estações de metrô (Linha 5-Lilás e futura Linha 17-Ouro), corredores de ônibus e fácil acesso à Marginal Pinheiros e ao Aeroporto de Congonhas.\n*   **Qualidade de Vida Elevada:** Equilibra o ritmo urbano com áreas residenciais tranquilas e arborizadas, além de ser um bairro seguro.\n*   **Polo Corporativo e de Serviços:** A presença de centros comerciais, hospitais e universidades gera uma demanda constante por moradia.\n\nO Brooklin atrai uma demanda diversificada e com alto poder aquisitivo, sendo muito procurado para locação, inclusive para curta temporada. É um mercado sólido e promissor, com grandes chances de retorno financeiro.\n\nCom base nessas informações, você teria interesse em conhecer a precificação de alguma propriedade no Brooklin?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Legal! Eu queria mesmo precificar uma propriedade la!"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Excelente! Para que eu possa te ajudar com a precificação da sua propriedade no Brooklin, preciso de algumas informações.\n\nPara começar, qual é o tipo da propriedade? É uma casa ou um apartamento?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Seria uma Casa, mesmo!"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Ótimo! Uma casa no Brooklin.\n\nPara continuar com a precificação, poderia me informar quantos quartos a casa possui?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Tem 3 quartos!"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Certo, uma casa com 3 quartos no Brooklin.\n\nAgora, para refinar a estimativa, quantos banheiros a propriedade possui?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "2."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "tool_call",
+        "content": {
+          "tool_name": "pricing_agent",
+          "args": {
+            "info": {
+              "bathrooms": 2,
+              "bedrooms": 3,
+              "neighborhood": "Brooklin",
+              "type": "Casa"
+            }
+          }
+        }
+      },
+      {
+        "role": "pricing_agent",
+        "type": "tool_response",
+        "content": {
+          "info": {
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "parking_slots": null,
+            "area": null,
+            "iptu": null,
+            "neighborhood": "Brooklin",
+            "type": "Casa"
+          },
+          "comment": "O próximo campo a coletar é parking_slots",
+          "estimated_price": null,
+          "metadata": 918
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Entendido! Uma casa com 3 quartos e 2 banheiros no Brooklin.\n\nPara prosseguirmos com a precificação, preciso saber quantos vagas de garagem a casa possui."
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "ah, cabem 3 carros."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "tool_call",
+        "content": {
+          "tool_name": "pricing_agent",
+          "args": {
+            "info": {
+              "bathrooms": 2,
+              "type": "Casa",
+              "bedrooms": 3,
+              "neighborhood": "Brooklin",
+              "parking_slots": 3
+            }
+          }
+        }
+      },
+      {
+        "role": "pricing_agent",
+        "type": "tool_response",
+        "content": {
+          "info": {
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "parking_slots": 3,
+            "area": null,
+            "iptu": null,
+            "neighborhood": "Brooklin",
+            "type": "Casa"
+          },
+          "comment": "O próximo campo a coletar é area",
+          "estimated_price": null,
+          "metadata": 894
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Perfeito! Uma casa com 3 quartos, 2 banheiros e 3 vagas de garagem no Brooklin.\n\nAgora, qual é a área total da propriedade em metros quadrados?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Tem 150."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "tool_call",
+        "content": {
+          "tool_name": "pricing_agent",
+          "args": {
+            "info": {
+              "type": "Casa",
+              "bathrooms": 2,
+              "area": 150,
+              "parking_slots": 3,
+              "bedrooms": 3,
+              "neighborhood": "Brooklin"
+            }
+          }
+        }
+      },
+      {
+        "role": "pricing_agent",
+        "type": "tool_response",
+        "content": {
+          "info": {
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "parking_slots": 3,
+            "area": 150.0,
+            "iptu": null,
+            "neighborhood": "Brooklin",
+            "type": "Casa"
+          },
+          "comment": "O próximo campo a coletar é iptu",
+          "estimated_price": null,
+          "metadata": 971
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Ótimo! Uma casa com 3 quartos, 2 banheiros, 3 vagas de garagem e 150 m² no Brooklin.\n\nPara finalizar, qual é o valor do IPTU mensal ou anual da propriedade?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Eu acho que pago 100 de iptu"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "tool_call",
+        "content": {
+          "tool_name": "pricing_agent",
+          "args": {
+            "info": {
+              "type": "Casa",
+              "neighborhood": "Brooklin",
+              "area": 150,
+              "bedrooms": 3,
+              "parking_slots": 3,
+              "iptu": 100,
+              "bathrooms": 2
+            }
+          }
+        }
+      },
+      {
+        "role": "pricing_agent",
+        "type": "tool_response",
+        "content": {
+          "info": {
+            "bedrooms": 3,
+            "bathrooms": 2,
+            "parking_slots": 3,
+            "area": 150.0,
+            "iptu": 100.0,
+            "neighborhood": "Brooklin",
+            "type": "Casa"
+          },
+          "comment": "Preço estimado com sucesso.",
+          "estimated_price": 1262451.48,
+          "metadata": 887
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Com todas as informações que você me forneceu, a estimativa de preço para a sua casa no Brooklin, com 3 quartos, 2 banheiros, 3 vagas de garagem, 150 m² e IPTU de R$100,00, é de **R$ 1.262.451,48**.\n\nSe tiver mais alguma dúvida ou quiser explorar outras opções, estou à disposição!"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Obrigado!"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "De nada! Fico feliz em ajudar. Se precisar de mais alguma informação sobre o Brooklin ou qualquer outro bairro que eu cubra (Santana, Mooca, Vila Mariana, Tatuapé), ou se quiser precificar outra propriedade, é só me chamar!"
+        }
+      }
+    ]
+  },
+  {
+    "model_name": "gemini-2.5-flash",
+    "total_tokens": [
+      1245,
+      1340,
+      14028,
+      2715,
+      3102,
+      3083,
+      3820,
+      4007,
+      3972
+    ],
+    "latency": [
+      1.9107243750186171,
+      20.304253083013464,
+      14.333333292015595,
+      1.55505091699888,
+      1.3434753749752417
+    ],
+    "turns": 5,
+    "chat": [
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Hey!"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Olá! Sou seu consultor imobiliário da Quarto. Estou aqui para ajudar você a explorar as melhores oportunidades de investimento em imóveis.\n\nNo momento, sou especialista nos bairros de Santana, Mooca, Brooklin, Vila Mariana e Tatuapé, em São Paulo.\n\nEm qual desses bairros você gostaria de investir ou tem uma propriedade para precificar? Posso começar apresentando uma análise detalhada sobre as características e o potencial de valorização do bairro de seu interesse."
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Me conta mais sobre Mooca!"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "tool_call",
+        "content": {
+          "tool_name": "rag_agent",
+          "args": {
+            "target_neighborhood": "Mooca"
+          }
+        }
+      },
+      {
+        "role": "rag_agent",
+        "type": "tool_response",
+        "content": {
+          "result": "Olá! Que ótima escolha você fez em olhar para a Mooca. É um bairro com uma história riquíssima e que tem se mostrado uma excelente aposta para quem busca investir no mercado imobiliário. Vamos detalhar o que faz da Mooca uma região tão interessante.\n\n### Visão geral do bairro\n\nA Mooca é um dos bairros mais tradicionais e charmosos de São Paulo, conhecido por sua forte herança italiana, que se reflete na cultura e, claro, na gastronomia local. Embora tenha um passado industrial, a região passou por uma notável transformação, migrando para um vibrante centro residencial e se consolidando como um dos bairros mais seguros da cidade. É um lugar que consegue harmonizar a tradição com a modernidade, oferecendo um estilo de vida acolhedor e com forte senso de comunidade.\n\n### Principais fatores de valorização\n\n*   **Revitalização e Novos Empreendimentos:** A Mooca está em constante processo de revitalização, com a construção de diversos novos empreendimentos residenciais e comerciais, incluindo o Mooca Plaza Shopping. Essa transformação de um bairro fabril para um residencial moderno aumenta significativamente o valor do metro quadrado e a demanda por imóveis.\n*   **Cultura e Tradição:** A capacidade de manter suas raízes históricas e culturais, como a Festa de San Gennaro e a culinária italiana, enquanto se moderniza, cria um apelo único. Essa combinação atrai tanto moradores que buscam qualidade de vida quanto investidores que veem potencial em um bairro com identidade.\n*   **Infraestrutura Completa:** O bairro oferece uma infraestrutura urbana robusta, com escolas de qualidade desde o ensino básico até o superior, hospitais renomados, supermercados, academias e centros comerciais. Essa autossuficiência de serviços é um grande diferencial para a atratividade de locação e venda de imóveis.\n*   **Mobilidade e Acesso:** A Mooca possui excelente mobilidade urbana, com fácil acesso a estações de metrô e grandes avenidas. A proximidade a esses eixos de transporte tem demonstrado uma valorização ainda mais acentuada para os imóveis na região.\n*   **Áreas Verdes e Lazer:** A Mooca tem investido em bem-estar, com a presença do Parque Sabesp Mooca e a promessa do futuro Parque da Mooca, que ampliarão as opções de lazer ao ar livre. A oferta de espaços para atividades físicas e convívio social eleva a qualidade de vida e, consequentemente, o valor percebido dos imóveis.\n*   **Segurança:** Considerada um dos distritos mais seguros de São Paulo por vários anos, a baixa taxa de criminalidade é um fator crucial que atrai famílias e valoriza a moradia na região.\n\n### Perfil de demanda imobiliária\n\nO perfil de moradores da Mooca, que historicamente era composto por descendentes de italianos, tem se tornado mais heterogêneo e rejuvenecido, atraindo famílias e novos residentes em busca de qualidade de vida. O custo de vida mediano do bairro, comparado a outras regiões de São Paulo, permite que ele atraia uma diversidade de perfis, desde aqueles que buscam imóveis mais acessíveis até opções de alto padrão. A demanda por imóveis para locação residencial é elevada, especialmente por unidades compactas como studios e apartamentos de menor metragem, o que indica um mercado aquecido para investidores focados em renda.\n\n### Conclusão sobre o potencial de investimento\n\nA Mooca é, sem dúvida, uma excelente opção para investimento imobiliário. A combinação de sua rica história e cultura com o processo contínuo de revitalização e modernização, a infraestrutura completa, a segurança e a excelente mobilidade urbana, faz com que o bairro apresente um potencial de valorização contínua e crescimento robusto. O volume de lançamentos e a consistente absorção do mercado, impulsionada pela demanda por imóveis bem localizados, reforçam a Mooca como um dos principais vetores de investimento na Zona Leste de São Paulo, oferecendo um equilíbrio entre risco controlado, retorno potencial e demanda sustentada."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "A Mooca é um bairro com uma história riquíssima e que tem se mostrado uma excelente aposta para quem busca investir no mercado imobiliário.\n\nÉ um dos bairros mais tradicionais e charmosos de São Paulo, conhecido por sua forte herança italiana, que se reflete na cultura e, claro, na gastronomia local. Embora tenha um passado industrial, a região passou por uma notável transformação, migrando para um vibrante centro residencial e se consolidando como um dos bairros mais seguros da cidade. É um lugar que consegue harmonizar a tradição com a modernidade, oferecendo um estilo de vida acolhedor e com forte senso de comunidade.\n\n**Principais fatores de valorização:**\n\n*   **Revitalização e Novos Empreendimentos:** A Mooca está em constante processo de revitalização, com a construção de diversos novos empreendimentos residenciais e comerciais, incluindo o Mooca Plaza Shopping.\n*   **Cultura e Tradição:** A capacidade de manter suas raízes históricas e culturais, como a Festa de San Gennaro e a culinária italiana, enquanto se moderniza, cria um apelo único.\n*   **Infraestrutura Completa:** O bairro oferece uma infraestrutura urbana robusta, com escolas de qualidade, hospitais renomados, supermercados, academias e centros comerciais.\n*   **Mobilidade e Acesso:** A Mooca possui excelente mobilidade urbana, com fácil acesso a estações de metrô e grandes avenidas.\n*   **Áreas Verdes e Lazer:** A Mooca tem investido em bem-estar, com a presença do Parque Sabesp Mooca e a promessa do futuro Parque da Mooca.\n*   **Segurança:** Considerada um dos distritos mais seguros de São Paulo por vários anos, a baixa taxa de criminalidade é um fator crucial que atrai famílias e valoriza a moradia na região.\n\nO perfil de moradores da Mooca tem se tornado mais heterogêneo e rejuvenecido, atraindo famílias e novos residentes em busca de qualidade de vida. A demanda por imóveis para locação residencial é elevada, especialmente por unidades compactas como studios e apartamentos de menor metragem, o que indica um mercado aquecido para investidores focados em renda.\n\nA Mooca é, sem dúvida, uma excelente opção para investimento imobiliário, apresentando um potencial de valorização contínua e crescimento robusto.\n\nVocê tem alguma propriedade na Mooca que gostaria de precificar? Ou gostaria de explorar mais algum aspecto do bairro?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Legal. E tem muitos restaurantes la, entao? Bares e tals?"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "tool_call",
+        "content": {
+          "tool_name": "rag_agent",
+          "args": {
+            "target_neighborhood": "Mooca"
+          }
+        }
+      },
+      {
+        "role": "rag_agent",
+        "type": "tool_response",
+        "content": {
+          "result": "## Visão Geral do Bairro da Mooca\n\nA Mooca é um bairro que respira história e tradição em São Paulo, com uma forte herança italiana que se manifesta na cultura e na gastronomia local. O que antes era uma região predominantemente industrial, hoje se transformou em um vibrante centro residencial, conhecido por sua segurança e um acolhedor senso de comunidade. É um lugar que soube harmonizar suas raízes históricas, mantendo eventos como a Festa de San Gennaro e sua culinária típica, com a modernidade de novos empreendimentos. Essa combinação única atrai tanto moradores em busca de qualidade de vida quanto investidores que enxergam o potencial de um bairro com identidade e em constante evolução.\n\n## Principais Fatores de Valorização\n\nA Mooca apresenta diversos fatores que a tornam uma região com alto potencial de valorização imobiliária:\n\n*   **Revitalização e Modernização Contínua:** O bairro está em um processo constante de revitalização, com novos empreendimentos que modernizam a região sem perder sua essência. Essa transformação atrai novos moradores e valoriza o estoque imobiliário existente.\n*   **Infraestrutura Urbana Completa:** A Mooca oferece uma infraestrutura robusta e autossuficiente. Isso inclui escolas de qualidade, hospitais renomados, uma vasta rede de supermercados, academias e centros comerciais. Essa completude de serviços é um grande atrativo para locação e venda de imóveis, garantindo conveniência aos moradores.\n*   **Segurança e Qualidade de Vida:** Reconhecida como um dos bairros mais seguros da cidade, a Mooca oferece um ambiente tranquilo e familiar. A percepção de segurança, aliada a um estilo de vida acolhedor, aumenta a atratividade para famílias e indivíduos que buscam um lar.\n*   **Excelente Mobilidade e Acesso:** A localização estratégica e a boa conectividade da Mooca, especialmente a proximidade com estações de metrô e grandes avenidas, garantem fácil acesso a outras regiões da cidade. Essa mobilidade urbana é um diferencial que impulsiona a valorização, especialmente para imóveis próximos a esses eixos de transporte.\n*   **Cultura e Gastronomia Fortes:** A rica herança italiana se traduz em uma forte oferta gastronômica e cultural, com restaurantes tradicionais e eventos que celebram a história do bairro. Essa identidade cultural única aumenta o charme e a atratividade da região, tornando-a mais desejável para morar.\n\n## Perfil de Demanda Imobiliária\n\nO perfil de moradores da Mooca, que historicamente era composto por descendentes de italianos, tem se diversificado e rejuvenescido. Atualmente, o bairro atrai uma gama mais ampla de famílias e novos residentes que buscam qualidade de vida. O custo de vida mediano, quando comparado a outras regiões de São Paulo, permite que a Mooca seja acessível a diferentes perfis, desde aqueles que procuram imóveis mais acessíveis até opções de alto padrão.\n\nHá uma **elevada demanda por imóveis para locação residencial**, com um destaque especial para unidades compactas, como studios e apartamentos de menor metragem. Isso indica um mercado de aluguel aquecido, oferecendo uma excelente oportunidade para investidores focados em renda passiva.\n\n## Conclusão sobre o Potencial de Investimento\n\nA Mooca é, sem dúvida, uma excelente opção para investimento imobiliário. A combinação de sua rica história e cultura com o processo contínuo de revitalização e modernização, a infraestrutura completa, a segurança e a excelente mobilidade urbana, faz com que o bairro apresente um potencial de valorização contínua e crescimento robusto.\n\nÁreas próximas às estações de metrô e grandes avenidas, em particular, têm demonstrado uma valorização ainda mais acentuada. O volume de lançamentos e a consistente absorção do mercado, impulsionada pela demanda por imóveis bem localizados, reforçam a Mooca como um dos principais vetores de investimento na Zona Leste de São Paulo, oferecendo um equilíbrio entre risco controlado, retorno potencial e demanda sustentada. Para o investidor, a Mooca representa uma aposta sólida em um bairro com identidade forte e um futuro promissor."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Sim, com certeza! A Mooca, por ter uma forte herança italiana e ser um bairro com infraestrutura completa, é muito rica em opções de gastronomia. Você encontrará uma grande variedade de restaurantes, desde os mais tradicionais com culinária italiana autêntica até opções mais modernas.\n\nAlém disso, a revitalização do bairro e a presença de centros comerciais contribuem para uma boa oferta de bares e locais de lazer, tornando a Mooca um lugar vibrante também para a vida noturna e social.\n\nVocê tem alguma propriedade na Mooca que gostaria de precificar? Ou gostaria de explorar mais algum aspecto do bairro?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "E beach clubs com praia, tem?"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "A Mooca, assim como toda a cidade de São Paulo, não possui praia. Por isso, não há beach clubs com praia no bairro.\n\nNo entanto, a Mooca oferece diversas opções de lazer, como parques e uma rica gastronomia, como mencionei anteriormente.\n\nVocê tem alguma propriedade na Mooca que gostaria de precificar? Ou gostaria de explorar mais algum aspecto do bairro?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Ah, entendi. Entao obrigado."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "De nada! Se tiver mais alguma dúvida sobre a Mooca ou qualquer outro bairro que eu cubra (Santana, Brooklin, Vila Mariana e Tatuapé), ou se quiser precificar uma propriedade, é só me chamar. Estou à disposição!"
+        }
+      }
+    ]
+  },
+  {
+    "model_name": "gemini-2.5-flash",
+    "total_tokens": [
+      1228,
+      1308,
+      3487,
+      2588,
+      2808,
+      2871
+    ],
+    "latency": [
+      2.0918904170102905,
+      11.971818874997552,
+      1.7301883750187699,
+      1.0282024589832872
+    ],
+    "turns": 4,
+    "chat": [
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Oi"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Olá! Bem-vindo à Quarto. Sou seu consultor imobiliário especializado nos bairros de Santana, Mooca, Brooklin, Vila Mariana e Tatuapé aqui em São Paulo.\n\nEstou aqui para te ajudar a entender melhor o potencial de investimento e precificar propriedades nesses bairros. Para começarmos, em qual desses bairros você tem interesse em investir ou gostaria de precificar uma propriedade?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "O que tem para fazer em Santana?"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "tool_call",
+        "content": {
+          "tool_name": "rag_agent",
+          "args": {
+            "target_neighborhood": "Santana"
+          }
+        }
+      },
+      {
+        "role": "rag_agent",
+        "type": "tool_response",
+        "content": {
+          "result": "## Análise de Investimento Imobiliário: Santana\n\nPrezado investidor,\n\nSantana, na Zona Norte de São Paulo, apresenta-se como uma oportunidade robusta e com grande potencial de valorização para o seu capital. É um bairro que combina história, infraestrutura moderna e uma dinâmica de mercado imobiliário bastante favorável.\n\n### 1. Visão Geral do Bairro\n\nSantana é um dos distritos mais consolidados e importantes da Zona Norte de São Paulo, com uma rica história que remonta ao século XVII. Ao longo do tempo, transformou-se de uma antiga fazenda em um verdadeiro polo socioeconômico regional, funcionando como um centro de comércio, serviços e lazer para toda a região. O bairro é reconhecido pela sua infraestrutura completa e pela alta qualidade de vida que oferece aos seus moradores. Ao caminhar por Santana, você notará uma interessante combinação de edifícios mais antigos com novos empreendimentos, além de áreas verdes e um comércio intenso e diversificado.\n\n### 2. Principais Fatores de Valorização\n\nSantana se destaca por diversos fatores que o tornam um investimento imobiliário atraente:\n\n*   **Infraestrutura Consolidada e Autossuficiente:** Diferente de regiões em desenvolvimento, Santana já possui uma infraestrutura totalmente consolidada, o que reduz significativamente os riscos para o investidor. O bairro oferece uma vasta gama de serviços essenciais e de conveniência, desde hospitais de referência como o São Camilo e o Mandaqui, até escolas e colégios tradicionais e universidades. Essa autossuficiência do bairro é um grande diferencial, aumentando a atratividade para quem busca praticidade no dia a dia e valoriza a qualidade de vida.\n*   **Mobilidade Estratégica e Conectividade:** Santana ocupa uma posição central na Zona Norte, funcionando como um verdadeiro eixo de conexão para diversas partes da cidade. A grande estrela aqui é o metrô: o bairro é servido por três estações da Linha 1-Azul (Santana, Carandiru e Portuguesa-Tietê), garantindo acesso direto ao Centro, Avenida Paulista e Zona Sul. Essa conectividade é um atrativo enorme para locatários e compradores, garantindo alta liquidez para os imóveis. Além disso, está conectado a vias importantes como as Avenidas Braz Leme, Voluntários da Pátria, Cruzeiro do Sul e a Marginal Tietê, facilitando o deslocamento de carro para qualquer ponto da cidade. A presença do Terminal Rodoviário do Tietê e do Aeroporto Campo de Marte no bairro aumenta ainda mais a conveniência e a demanda por moradia.\n*   **Forte Oferta de Comércio, Serviços e Lazer:** A vasta oferta de comércio, serviços e lazer faz de Santana um centro regional. Essa diversidade de opções aumenta a atratividade para locação e moradia, pois os moradores encontram tudo o que precisam sem a necessidade de grandes deslocamentos.\n*   **Potencial de Valorização Contínua:** O bairro não depende apenas de uma valorização futura; ele já possui uma base sólida de liquidez e ocupação. A constante demanda por moradia, aliada à transformação e modernização de algumas áreas (como o Parque da Juventude, que impulsionou a especulação imobiliária), sugere que Santana continuará sendo uma região atrativa para investimentos imobiliários.\n\n### 3. Perfil de Demanda Imobiliária\n\nA demanda por imóveis em Santana é constante e diversificada, o que garante uma boa liquidez para os imóveis na região:\n\n*   **Famílias:** O bairro atrai famílias que buscam tranquilidade, boas escolas e uma infraestrutura completa para o dia a dia. Há interesse tanto por apartamentos quanto por casas e sobrados, inclusive em vilas fechadas, que oferecem mais espaço e privacidade.\n*   **Jovens Profissionais:** A praticidade da mobilidade, especialmente o acesso ao metrô, e a vasta oferta de serviços e lazer atraem jovens profissionais que buscam conveniência e qualidade de vida.\n*   **Diversidade de Imóveis:** Há um interesse tanto por apartamentos, que são amplamente disponíveis para aluguel e venda, quanto por casas e sobrados, inclusive em vilas fechadas, que oferecem mais espaço e privacidade.\n\n### 4. Conclusão sobre o Potencial de Investimento\n\nInvestir em Santana significa apostar em um bairro que já provou sua resiliência e capacidade de se reinventar, mantendo-se como um dos mais desejados da capital paulista. A combinação de uma localização estratégica, infraestrutura consolidada, excelente mobilidade e uma vasta oferta de comércio, serviços e lazer cria um cenário de baixa volatilidade e alta previsibilidade de retorno para o investidor.\n\nSantana se apresenta como um mercado imobiliário consistente e com grande potencial de valorização, especialmente em imóveis que atendam à demanda por praticidade, conforto e segurança. É um investimento em um bairro que oferece segurança para o seu capital e a promessa de retornos sólidos."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Santana é um bairro com uma infraestrutura completa e muitas opções de lazer, comércio e serviços!\n\nÉ um polo socioeconômico na Zona Norte, com uma rica história e uma combinação interessante de edifícios antigos e novos empreendimentos. Possui hospitais de referência, escolas tradicionais e universidades.\n\nEm termos de mobilidade, é muito bem servido por três estações da Linha 1-Azul do metrô (Santana, Carandiru e Portuguesa-Tietê), além de estar conectado a importantes vias como as Avenidas Braz Leme e Marginal Tietê. O Terminal Rodoviário do Tietê e o Aeroporto Campo de Marte também estão no bairro.\n\nA demanda por imóveis em Santana é constante e diversificada, atraindo famílias, jovens profissionais e pessoas que buscam praticidade e qualidade de vida.\n\nGostaria de saber mais sobre algum outro aspecto de Santana ou de outro bairro? Ou talvez você tenha interesse em precificar uma propriedade por lá?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "E viver la é bom?"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Sim, viver em Santana é considerado muito bom por diversos motivos! O bairro oferece uma alta qualidade de vida aos seus moradores, combinando a tranquilidade de um bairro residencial com a conveniência de ter tudo por perto.\n\nA infraestrutura consolidada é um dos grandes atrativos, com uma vasta gama de serviços essenciais e de conveniência, como hospitais, escolas, universidades, supermercados e diversas opções de comércio.\n\nA mobilidade é outro ponto forte, com fácil acesso ao metrô e a importantes vias da cidade, o que facilita o deslocamento para o trabalho ou lazer em outras regiões de São Paulo.\n\nAlém disso, Santana possui diversas opções de lazer, como parques, shoppings e uma vida noturna agitada, garantindo que sempre haja algo para fazer.\n\nEm resumo, Santana é um bairro que oferece praticidade, conforto e segurança, sendo uma excelente opção para quem busca qualidade de vida em São Paulo.\n\nVocê tem alguma outra pergunta sobre Santana ou gostaria de explorar as características de outro bairro?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Legal, obrigado."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "De nada! Fico feliz em ajudar.\n\nSe surgir mais alguma dúvida sobre Santana, Mooca, Brooklin, Vila Mariana ou Tatuapé, ou se você quiser saber mais sobre como podemos te ajudar a precificar uma propriedade, é só me dizer. Estou à disposição!"
+        }
+      }
+    ]
+  },
+  {
+    "model_name": "gemini-2.5-flash",
+    "total_tokens": [
+      1235,
+      2743,
+      2288,
+      2368,
+      2423
+    ],
+    "latency": [
+      10.909095083014108,
+      1.0622175830067135,
+      1.7782293329946697
+    ],
+    "turns": 3,
+    "chat": [
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Queria saber se vale a pena investir na Mooca."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "tool_call",
+        "content": {
+          "tool_name": "rag_agent",
+          "args": {
+            "target_neighborhood": "Mooca"
+          }
+        }
+      },
+      {
+        "role": "rag_agent",
+        "type": "tool_response",
+        "content": {
+          "result": "## Visão Geral do Bairro da Mooca\n\nA Mooca é um bairro com uma história rica e um charme particular em São Paulo, conhecido por sua forte herança italiana, que se manifesta na cultura e na culinária local. Embora tenha um passado industrial, a região passou por uma notável transformação, consolidando-se como um vibrante centro residencial e um dos bairros mais seguros da cidade. É um local que consegue harmonizar a tradição com a modernidade, oferecendo um estilo de vida acolhedor e com um forte senso de comunidade.\n\n## Principais Fatores de Valorização\n\nA Mooca apresenta diversos fatores que a tornam uma região atraente para investimento imobiliário:\n\n*   **Tradição e Modernidade:** A capacidade do bairro de manter suas raízes históricas e culturais, como a Festa de San Gennaro e a culinária italiana, enquanto se moderniza com novos empreendimentos, cria um apelo único. Essa combinação atrai tanto moradores que buscam qualidade de vida quanto investidores que veem potencial em um bairro com identidade.\n*   **Infraestrutura Completa:** O bairro oferece uma infraestrutura urbana robusta, com escolas de qualidade desde o ensino básico até o superior, hospitais renomados, supermercados, academias e centros comerciais. Essa autossuficiência de serviços é um grande diferencial para a atratividade de locação e venda de imóveis, garantindo conveniência aos moradores.\n*   **Segurança e Mobilidade:** A Mooca é reconhecida como um dos bairros mais seguros de São Paulo, o que é um fator crucial para a decisão de moradia. Além disso, a excelente mobilidade urbana, com acesso a estações de metrô e grandes avenidas, aumenta a atratividade para quem precisa se deslocar pela cidade.\n*   **Revitalização Contínua:** O processo contínuo de revitalização e modernização do bairro, com novos lançamentos imobiliários, impulsiona a valorização da região, especialmente em áreas próximas a estações de metrô e grandes vias.\n\n## Perfil de Demanda Imobiliária\n\nO perfil de moradores da Mooca, que historicamente era composto por descendentes de italianos, tem se tornado mais heterogêneo e rejuvenecido, atraindo famílias e novos residentes em busca de qualidade de vida. O custo de vida mediano do bairro, comparado a outras regiões de São Paulo, permite que ele atraia uma diversidade de perfis, desde aqueles que buscam imóveis mais acessíveis até opções de alto padrão. A demanda por imóveis para locação residencial é elevada, especialmente por unidades compactas como studios e apartamentos de menor metragem, o que indica um mercado aquecido para investidores focados em renda.\n\n## Conclusão sobre o Potencial de Investimento\n\nA Mooca é, sem dúvida, uma excelente opção para investimento imobiliário. A combinação de sua rica história e cultura com o processo contínuo de revitalização e modernização, a infraestrutura completa, a segurança e a excelente mobilidade urbana, faz com que o bairro apresente um potencial de valorização contínua e crescimento robusto. Áreas próximas às estações de metrô e grandes avenidas, em particular, têm demonstrado uma valorização ainda mais acentuada. O volume de lançamentos e a consistente absorção do mercado, impulsionada pela demanda por imóveis bem localizados, reforçam a Mooca como um dos principais vetores de investimento na Zona Leste de São Paulo, oferecendo um equilíbrio entre risco controlado, retorno potencial e demanda sustentada."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "A Mooca é um bairro com uma história rica e um charme particular em São Paulo, conhecido por sua forte herança italiana. É um local que consegue harmonizar a tradição com a modernidade, oferecendo um estilo de vida acolhedor e com um forte senso de comunidade.\n\n**Pontos positivos para investimento:**\n\n*   **Tradição e Modernidade:** O bairro mantém suas raízes históricas e culturais, enquanto se moderniza com novos empreendimentos, criando um apelo único.\n*   **Infraestrutura Completa:** Oferece uma infraestrutura urbana robusta, com escolas, hospitais, supermercados, academias e centros comerciais, garantindo conveniência aos moradores.\n*   **Segurança e Mobilidade:** É reconhecida como um dos bairros mais seguros de São Paulo e possui excelente mobilidade urbana, com acesso a estações de metrô e grandes avenidas.\n*   **Revitalização Contínua:** O processo contínuo de revitalização e modernização impulsiona a valorização da região.\n\nO perfil de moradores da Mooca tem se tornado mais heterogêneo e rejuvenecido, atraindo famílias e novos residentes em busca de qualidade de vida. A demanda por imóveis para locação residencial é elevada, especialmente por unidades compactas.\n\nEm resumo, a Mooca é uma excelente opção para investimento imobiliário, com potencial de valorização contínua e crescimento robusto.\n\nVocê gostaria de saber mais sobre as características do bairro ou tem interesse em precificar alguma propriedade na Mooca?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Tem aeroporto la? Fica aberto ate que horas os shoppings?"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Não há aeroporto na Mooca. Sobre os shoppings, para te dar uma informação precisa, eu precisaria saber qual shopping você tem interesse, pois os horários podem variar.\n\nVocê tem mais alguma pergunta sobre as características do bairro ou gostaria de saber sobre a precificação de alguma propriedade na Mooca?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "nao. obrigado."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "De nada! Se precisar de mais alguma informação sobre a Mooca ou qualquer outro bairro que eu cubra (Santana, Brooklin, Vila Mariana, Tatuapé), ou se quiser precificar uma propriedade, é só me chamar."
+        }
+      }
+    ]
+  },
+  {
+    "model_name": "gemini-2.5-flash",
+    "total_tokens": [
+      1211,
+      1337,
+      2774,
+      2171,
+      2475,
+      2524
+    ],
+    "latency": [
+      1.9140748750069179,
+      9.954539083992131,
+      2.0407342920079827,
+      0.9038343339925632
+    ],
+    "turns": 4,
+    "chat": [
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Ola!"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Olá! Bem-vindo(a) à Quarto. Sou seu consultor imobiliário especializado em algumas das melhores regiões de São Paulo.\n\nPara começarmos, em qual bairro você tem interesse em investir? Meus bairros de especialidade são Santana, Mooca, Brooklin, Vila Mariana e Tatuapé."
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Me conta sobre Tatuapé? Tem muita casa la?"
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "tool_call",
+        "content": {
+          "tool_name": "rag_agent",
+          "args": {
+            "target_neighborhood": "Tatuapé"
+          }
+        }
+      },
+      {
+        "role": "rag_agent",
+        "type": "tool_response",
+        "content": {
+          "result": "## Tatuapé: Uma Oportunidade de Investimento Imobiliário com Retorno Sólido\n\nOlá! Que excelente escolha você fez ao olhar para o Tatuapé. É um bairro que realmente se destaca em São Paulo e oferece um cenário muito promissor para quem pensa em investir no mercado imobiliário. Vamos dar uma olhada no que faz essa região ser tão interessante.\n\n### 1. Visão geral do bairro\n\nO Tatuapé é uma das joias da Zona Leste de São Paulo, conhecido por ser um bairro completo e altamente valorizado. Ele consegue equilibrar a tradição de suas raízes com a modernidade de uma infraestrutura urbana de ponta, proporcionando uma qualidade de vida que atrai e fideliza seus moradores. É uma região com história, que evoluiu de um polo industrial para um dos principais centros residenciais e comerciais da cidade.\n\n### 2. Principais fatores de valorização\n\nO Tatuapé tem apresentado uma valorização imobiliária acima da média em São Paulo, sendo considerado um dos bairros mais cobiçados para morar e investir. A constante demanda por imóveis, aliada aos investimentos em infraestrutura e aos novos lançamentos de empreendimentos residenciais e comerciais, garante um cenário favorável para retornos a médio e longo prazo.\n\nA região se beneficia de uma infraestrutura urbana completa, com mobilidade eficiente, um comércio forte e diversificado, e uma vasta gama de serviços. Além disso, o perfil de moradores com alto poder aquisitivo contribui para a busca por imóveis de qualidade, impulsionando a valorização.\n\n### 3. Perfil de demanda imobiliária\n\nO Tatuapé atrai um público bastante diversificado, o que é ótimo para o investidor. É um bairro procurado por famílias consolidadas que buscam conforto e segurança, jovens profissionais que valorizam a praticidade de morar perto do trabalho e do lazer, e casais sem filhos em busca de conveniência. Os moradores da região frequentemente possuem alto poder aquisitivo e nível superior, o que se reflete na busca por imóveis de qualidade.\n\nEssa diversidade de perfis gera demanda por diferentes tipos de imóveis, desde apartamentos compactos, ideais para locação para solteiros ou casais, até unidades de alto padrão em condomínios com infraestrutura completa de lazer. A sensação de \"cidade do interior\" dentro da metrópole, onde se pode resolver quase tudo a pé, também contribui para a alta procura e a fidelidade dos moradores.\n\n### 4. Conclusão sobre o potencial de investimento\n\nO Tatuapé se consolida como uma excelente oportunidade de investimento imobiliário. A combinação de uma infraestrutura completa, mobilidade urbana eficiente, forte e diversificado comércio, e um perfil de moradores com alto poder aquisitivo, cria um ambiente propício para a valorização constante dos imóveis.\n\nA região está em contínuo desenvolvimento urbano, com a chegada de novos empreendimentos modernos e sofisticados, incluindo complexos multiuso que integram moradia, escritórios e lazer. Isso não só atrai novos moradores, mas também fortalece a demanda por locação e venda, garantindo liquidez para o seu investimento. Investir no Tatuapé é apostar em um bairro com solidez, rentabilidade e um futuro promissor na capital paulista."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "O Tatuapé é um bairro com um potencial de investimento imobiliário muito sólido! Ele é conhecido por ser uma região completa, que equilibra a tradição com uma infraestrutura urbana moderna, o que atrai e fideliza seus moradores.\n\nSobre a sua pergunta se tem muita casa por lá, o Tatuapé atrai um público bem diversificado, o que gera demanda por diferentes tipos de imóveis. Embora seja um bairro com muitos apartamentos, especialmente em condomínios com infraestrutura completa, ainda é possível encontrar casas, principalmente em algumas áreas mais tradicionais.\n\nA região está em constante desenvolvimento, com novos empreendimentos modernos e sofisticados, incluindo complexos multiuso. Isso tudo contribui para a valorização constante dos imóveis.\n\nVocê gostaria de explorar mais a fundo as características do Tatuapé ou talvez conhecer uma estimativa de preço para alguma propriedade específica?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "E vale a pena investir la? Me conta mais sobre o bairro."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "Sim, o Tatuapé é considerado uma excelente oportunidade de investimento imobiliário!\n\nEle se destaca por ter uma valorização imobiliária acima da média em São Paulo, sendo um dos bairros mais cobiçados para morar e investir. A demanda por imóveis é constante, e os investimentos em infraestrutura, junto com os novos lançamentos, criam um cenário muito favorável para retornos a médio e longo prazo.\n\nA infraestrutura urbana é completa, com mobilidade eficiente, um comércio forte e diversificado, e uma vasta gama de serviços. O perfil dos moradores, que geralmente têm alto poder aquisitivo, também contribui para a busca por imóveis de qualidade, impulsionando a valorização.\n\nÉ um bairro que atrai desde famílias consolidadas até jovens profissionais e casais sem filhos, todos buscando conforto, segurança e praticidade. Essa diversidade de perfis gera demanda por diferentes tipos de imóveis. A sensação de \"cidade do interior\" dentro da metrópole, onde se pode resolver quase tudo a pé, também é um grande atrativo.\n\nEm resumo, investir no Tatuapé é apostar em um bairro com solidez, rentabilidade e um futuro promissor na capital paulista.\n\nVocê tem alguma propriedade em mente no Tatuapé que gostaria de precificar? Ou talvez queira saber mais sobre algum outro aspecto do bairro?"
+        }
+      },
+      {
+        "role": "user",
+        "type": "text",
+        "content": {
+          "result": "Obrigado."
+        }
+      },
+      {
+        "role": "planner_agent",
+        "type": "text",
+        "content": {
+          "result": "De nada! Fico feliz em ajudar.\n\nSe surgir mais alguma dúvida sobre o Tatuapé ou se você quiser explorar a precificação de alguma propriedade por lá, é só me dizer. Estou à disposição!"
+        }
+      }
+    ]
+  }
+]

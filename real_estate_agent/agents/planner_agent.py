@@ -4,6 +4,7 @@ import time
 
 from agents.research_agent import research_agent
 from agents.pricing_agent import pricing_agent
+from agents.rag_agent import rag_agent
 from utils.load_prompt import load_prompt
 from utils.render import render_block
 from utils.config import CLIENT, MODEL, ANSI_USER_COLOR, ANSI_RESET_COLOR
@@ -26,7 +27,7 @@ def save_chat(history: dict, text: str, role: str, type: str = "text") -> dict:
     })
     return history
 
-def planner_agent(model: str = MODEL, return_object: bool = False) -> None | dict:
+def planner_agent(model: str = MODEL, return_object: bool = False, rag: bool = False) -> None | dict:
     """
     Planner Agent: autonomously decides which agent to call based on user input.
 
@@ -41,8 +42,10 @@ def planner_agent(model: str = MODEL, return_object: bool = False) -> None | dic
     """
     system_prompt = load_prompt("planner_agent_v2")
     history = {"model_name": MODEL, "total_tokens": [], "latency": [], "turns": 0, "chat": []}
-
-    research_agent_def = types.FunctionDeclaration.from_callable(client = CLIENT, callable = research_agent)
+    if rag:
+        research_agent_def = types.FunctionDeclaration.from_callable(client = CLIENT, callable = rag_agent)
+    else:
+        research_agent_def = types.FunctionDeclaration.from_callable(client = CLIENT, callable = research_agent)
     pricing_agent_def = types.FunctionDeclaration.from_callable(client = CLIENT, callable = pricing_agent)
 
     tools = [
@@ -56,7 +59,8 @@ def planner_agent(model: str = MODEL, return_object: bool = False) -> None | dic
 
     tool_map = {
         "research_agent": research_agent,
-        "pricing_agent": pricing_agent
+        "pricing_agent": pricing_agent,
+        "rag_agent": rag_agent
     }
     
     chat = CLIENT.chats.create(

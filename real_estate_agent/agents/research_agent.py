@@ -1,5 +1,4 @@
 from utils.load_prompt import load_prompt
-from google import genai
 from google.genai import types
 from utils.config import CLIENT, MODEL
 
@@ -13,7 +12,6 @@ def research_agent(target_neighborhood: str) -> str:
 
     Args:
         target_neighborhood (str): Name of the neighborhood to analyze.
-        model: The model identifier to use (previously MODEL).
 
     Returns:
         dict: A dictionary containing:
