@@ -25,7 +25,11 @@ ANSI_RESET_COLOR = "\033[0m"
 MODEL_NAME = "house_price_model.joblib"
 MODEL_PATH = base_dir / "pricing_model" / "house_price_model.joblib"
 
-CONVERSATION_PATH = base_dir / "data" / "conversations.json"
-RAG_DATABASE_PATH = base_dir / "data" / "rag_database.json"
+DATA_FOLDER = base_dir / "data"
+CONVERSATION_PATH = DATA_FOLDER / "conversations.json"
+RAG_DATABASE_PATH = DATA_FOLDER / "rag_database.json"
+DB_NAME = "quarto_research_db"
+CHROMA_DB_PATH = DATA_FOLDER / DB_NAME
+MODEL_EMBEDDING = "models/gemini-embedding-001"
 
 DEFAULT_API_BASE = "http://localhost:8000"
