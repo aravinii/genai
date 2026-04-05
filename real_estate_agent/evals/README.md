@@ -2,6 +2,16 @@
 
 Notebooks for **capturing sample conversations**, **LLM-as-judge scoring**, and **aggregated metrics** (latency, tokens, judge scores). They assume you run from this repo with `GOOGLE_API_KEY` set (see root `.env`) and use JSON under `genai/data/` as configured in [`utils/config.py`](../utils/config.py).
 
+---
+
+### Report (RAG vs Research)
+
+**Generated Markdown report:** [`data/conversation_metrics_report.md`](../../data/conversation_metrics_report.md)
+
+This file summarizes the **RAG Agent vs Research Agent** comparison (LLM-judge scores, latency, tokens, and overview tables). Run [**chat_metrics.ipynb**](chat_metrics.ipynb) to reproduce or refresh the numbers before updating the committed `.md`.
+
+---
+
 ## Notebooks
 
 | Notebook | Purpose |
